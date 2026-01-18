@@ -1,0 +1,421 @@
+Cool — we’ll do this from absolute step one, and I’ll include the logo on the site.
+
+Step 0 — Save your logo file (so you can upload it to GitHub)
+
+On the logo image you generated here:
+	•	On phone: press and hold the image → Save image
+	•	On PC: right-click → Save image as…
+
+Rename it to: logo.png
+(If it saves as .jpg, that’s fine — just name it logo.jpg and I’ll show you both options.)
+
+⸻
+
+Step 1 — Create your GitHub account (if you don’t have one)
+	1.	Go to GitHub and sign up / log in.
+
+⸻
+
+Step 2 — Create the website repo (this controls your website link)
+
+To get the link with “rapidresponse” in it, create a repository named exactly:
+
+✅ rapidresponse-source.github.io
+
+Steps:
+	1.	Click + (top right) → New repository
+	2.	Repository name: rapidresponse-source.github.io
+	3.	Set it to Public
+	4.	Tick Add a README file (optional, but fine)
+	5.	Click Create repository
+
+Your site will eventually be:
+✅ https://rapidresponse-source.github.io
+
+⸻
+
+Step 3 — Add your website files
+
+On your new repo page:
+
+A) Create index.html
+	1.	Click Add file → Create new file
+	2.	File name: index.html
+	3.	Paste the HTML below
+	4.	Scroll down → Commit changes (green button)
+
+B) Upload the logo
+	1.	Click Add file → Upload files
+	2.	Upload your saved logo as logo.png
+	3.	Commit changes
+
+That’s it — just two things: index.html + logo.png.
+
+⸻
+
+Step 4 — Turn on GitHub Pages (publish it)
+	1.	In your repo, click Settings
+	2.	On the left menu, click Pages
+	3.	Under Build and deployment
+	•	Source: Deploy from a branch
+	•	Branch: main
+	•	Folder: /(root)
+	4.	Click Save
+
+Then visit:
+✅ https://rapidresponse-source.github.io
+
+⸻
+
+Your updated index.html (logo included)
+
+Save the logo in the repo as logo.png.
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rapid Response Leak & Drain Plumbers LTD | 24/7 Emergency Plumber</title>
+  <meta name="description" content="24/7 emergency plumbers. Leaks, burst pipes, blocked drains & toilets. Call 07366 283220." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#101b33;
+      --text:#eaf0ff;
+      --muted:#b8c6ff;
+      --border:rgba(255,255,255,.12);
+      --shadow:0 18px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --accent:#2dd4ff;
+      --accent2:#6366f1;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 12% 12%, rgba(45,212,255,.16), transparent 55%),
+        radial-gradient(750px 520px at 88% 22%, rgba(99,102,241,.14), transparent 55%),
+        radial-gradient(820px 580px at 55% 110%, rgba(255,176,32,.10), transparent 55%),
+        var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 18px}
+
+    .header{
+      position:sticky;top:0;z-index:30;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.75);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;padding:14px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900}
+    .logo{
+      width:54px;height:54px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:var(--shadow);
+      object-fit:cover;
+      background: rgba(255,255,255,.06);
+    }
+    .brandName{font-size:15px}
+    .brandSub{font-size:12px;color:var(--muted);font-weight:800}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-weight:800;font-size:14px}
+    .nav a{padding:8px 10px;border-radius:12px}
+    .nav a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .topCtas{display:flex;gap:10px;align-items:center}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 14px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:1000;
+      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+      transition: transform .12s ease, background .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.10)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(45,212,255,.95), rgba(99,102,241,.95));
+      border-color: rgba(255,255,255,.22);
+    }
+    .btn.ghost{background: rgba(255,255,255,.06)}
+    .btn.big{padding:14px 16px;border-radius:16px}
+    .btn.full{width:100%}
+
+    .hero{padding:54px 0 18px}
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:14px;
+    }
+    .heroCard,.sideCard,.panel,.card{
+      background: rgba(16,27,51,.74);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .heroCard{padding:26px}
+    .sideCard{padding:14px;display:flex;flex-direction:column;gap:12px}
+
+    .pill{
+      display:inline-flex;gap:10px;align-items:center;
+      font-weight:1000;color:var(--muted);
+      font-size:13px;text-transform:uppercase;letter-spacing:.4px
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 0 6px rgba(45,212,255,.14);
+    }
+
+    h1{margin:14px 0 10px;font-size:clamp(32px,4vw,46px);line-height:1.08;letter-spacing:-.6px}
+    .lead{color:var(--muted);font-size:16.5px;margin:0 0 18px}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
+    .trustRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .trustItem{
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      font-weight:900;font-size:13px;
+    }
+
+    .sideBlock{
+      padding:14px;border-radius:16px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.12);
+    }
+    .sideTitle{font-weight:1000;margin-bottom:6px}
+    .phone{display:inline-block;font-size:22px;font-weight:1000;letter-spacing:.3px;margin:4px 0 2px}
+    .muted{color:var(--muted)}
+    .muted.small{font-size:13px}
+    .miniList{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+    .miniList li{margin:6px 0}
+
+    .section{padding:22px 0}
+    .sectionHead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:12px}
+    .sectionHead h2{margin:0;font-size:22px}
+    .sectionHead p{margin:0;color:var(--muted);font-size:14px}
+
+    .cards3{display:grid;grid-template-columns: repeat(3, 1fr);gap:12px}
+    .card{padding:18px}
+    .icon{
+      width:42px;height:42px;border-radius:14px;
+      display:grid;place-items:center;
+      background: rgba(45,212,255,.12);
+      border:1px solid rgba(45,212,255,.22);
+      margin-bottom:10px;font-weight:900;
+    }
+
+    .twoCol{display:grid;grid-template-columns: 1fr 1fr;gap:12px}
+    .panel{padding:18px}
+
+    .faq{display:grid;gap:10px}
+    .faqItem{
+      background: rgba(16,27,51,.74);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:14px 16px;
+    }
+    .faqItem summary{cursor:pointer;font-weight:1000}
+    .faqItem p{color:var(--muted);margin:10px 0 0}
+
+    .contactGrid{display:grid;grid-template-columns: 1fr 1fr;gap:12px}
+    label{display:block;font-weight:900;font-size:13px;color:var(--muted);margin:10px 0 6px}
+    input,textarea{
+      width:100%;
+      padding:12px 12px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.05);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:120px;resize:vertical}
+
+    .footer{padding:22px 0 80px;color:rgba(234,240,255,.65);font-size:13px}
+    .footerRow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+    .stickyBar{
+      position:fixed;left:0;right:0;bottom:0;z-index:50;
+      display:none;
+      padding:10px 12px;
+      background: rgba(11,18,32,.9);
+      border-top:1px solid var(--border);
+      backdrop-filter: blur(10px);
+      gap:10px;
+    }
+    .stickyBtn{
+      flex:1;
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 14px;border-radius:16px;
+      font-weight:1000;
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .stickyBtn.call{background: linear-gradient(135deg, rgba(45,212,255,.95), rgba(99,102,241,.95))}
+    .stickyBtn.wa{background: rgba(255,255,255,.08)}
+
+    @media (max-width: 920px){
+      .nav{display:none;}
+      .heroGrid{grid-template-columns: 1fr;}
+      .cards3{grid-template-columns: 1fr;}
+      .twoCol{grid-template-columns: 1fr;}
+      .contactGrid{grid-template-columns: 1fr;}
+      .stickyBar{display:flex;}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Plumber",
+    "name":"Rapid Response Leak & Drain Plumbers LTD",
+    "telephone":"+447366283220",
+    "email":"rapidresponseltd@mail.com",
+    "openingHours":"Mo-Su 00:00-23:59",
+    "url":"https://rapidresponse-source.github.io"
+  }
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container topbar">
+      <a class="brand" href="#top" aria-label="Home">
+        <!-- logo.png must be in the same folder as this index.html -->
+        <img class="logo" src="logo.png" alt="Rapid Response logo" />
+        <div>
+          <div class="brandName">Rapid Response</div>
+          <div class="brandSub">Leak & Drain Plumbers LTD</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#areas">Areas</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="topCtas">
+        <a class="btn ghost" href="tel:+447366283220">Call</a>
+        <a class="btn primary" href="#contact">Get Help Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container heroGrid">
+        <div class="heroCard">
+          <div class="pill"><span class="dot"></span> 24/7 Emergency Plumbers • Fast Call-Outs</div>
+          <h1>Leaks, burst pipes, blocked drains — we’re on it, day or night.</h1>
+          <p class="lead">
+            Rapid Response Leak & Drain Plumbers LTD provides 24/7 emergency plumbing.
+            Call now for immediate help.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn primary big" href="tel:+447366283220">📞 Call 07366 283220</a>
+            <a class="btn ghost big" href="#services">View Services</a>
+          </div>
+
+          <div class="trustRow">
+            <div class="trustItem">✅ 24/7 Emergency</div>
+            <div class="trustItem">✅ Same-day response</div>
+            <div class="trustItem">✅ Clear pricing</div>
+            <div class="trustItem">✅ Domestic & landlords</div>
+          </div>
+        </div>
+
+        <aside class="sideCard">
+          <div class="sideBlock">
+            <div class="sideTitle">Emergency line</div>
+            <a class="phone" href="tel:+447366283220">07366 283220</a>
+            <div class="muted">Tap to call on mobile</div>
+          </div>
+
+          <div class="sideBlock">
+            <div class="sideTitle">WhatsApp</div>
+            <a class="btn ghost full" href="https://wa.me/447366283220" target="_blank" rel="noopener">💬 Message on WhatsApp</a>
+            <div class="muted small">Send photos + postcode for faster help</div>
+          </div>
+
+          <div class="sideBlock">
+            <div class="sideTitle">Email</div>
+            <a class="btn ghost full" href="mailto:rapidresponseltd@mail.com">rapidresponseltd@mail.com</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Emergency Plumbing & Drain Services</h2>
+          <p>Fast response, proper repairs, tidy workmanship.</p>
+        </div>
+
+        <div class="cards3">
+          <article class="card">
+            <div class="icon">💧</div>
+            <h3>Leak Detection & Repairs</h3>
+            <p>Hidden leaks, burst pipes, failed fittings — locate and repair quickly to stop damage.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🌀</div>
+            <h3>Blocked Drains & Toilets</h3>
+            <p>Unblocking, rodding and jetting for sinks, stacks, gullies and main drains.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🔧</div>
+            <h3>Emergency Plumbing Repairs</h3>
+            <p>Taps, toilets, waste pipes, traps, valves, leaks under sinks — fixed the right way.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" class="section">
+      <div class="container twoCol">
+        <div class="panel">
+          <h2>Areas Covered</h2>
+          <p class="muted">Edit this list to match your real coverage.</p>
+          <ul class="miniList">
+            <li>Barnsley</li><li>Leeds</li><li>Sheffield</li><li>Wakefield</li><li>Rotherham</li><li>Doncaster</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Why Choose Rapid Response</h2>
+          <ul class="miniList">
+            <li><strong>24/7 emergency call-outs</strong> — nights, weekends, holidays</li>
+            <li><strong>Fast response</strong> — we aim to attend ASAP</li>
+            <li><strong>Honest advice</strong> — fix it properly</li>
+            <li><strong>Clear pricing</strong> — no nonsense</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>FAQ</h2          >
+          <p>Quick answers for emergencies.</p>
+        </div>
+
+        <div class="faq">
+          <details class="faqItem">
+            <summary>How fast can you get here?</summary>
+            <p>Call <a href="tel:+447366283220">07366 283220</a> and we’ll give an
