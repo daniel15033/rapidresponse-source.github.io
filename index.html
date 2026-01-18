@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rapid Response Leak & Drain Plumbers LTD | 24/7 Emergency Plumber</title>
+  <meta name="description" content="24/7 emergency plumbers. Leaks, burst pipes, blocked drains & toilets. Call 07366 283220." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#101b33;
+      --text:#eaf0ff;
+      --muted:#b8c6ff;
+      --border:rgba(255,255,255,.12);
+      --shadow:0 18px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --accent:#2dd4ff;
+      --accent2:#6366f1;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 12% 12%, rgba(45,212,255,.16), transparent 55%),
+        radial-gradient(750px 520px at 88% 22%, rgba(99,102,241,.14), transparent 55%),
+        radial-gradient(820px 580px at 55% 110%, rgba(255,176,32,.10), transparent 55%),
+        var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 18px}
+
+    .header{
+      position:sticky;top:0;z-index:30;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.75);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;padding:14px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900}
+    .logo{
+      width:54px;height:54px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:var(--shadow);
+      object-fit:cover;
+      background: rgba(255,255,255,.06);
+    }
+    .brandName{font-size:15px}
+    .brandSub{font-size:12px;color:var(--muted);font-weight:800}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 14px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:1000;
+      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(45,212,255,.95), rgba(99,102,241,.95));
+    }
+
+    .hero{padding:54px 0}
+    h1{font-size:clamp(32px,4vw,46px);margin:14px 0}
+    .lead{color:var(--muted);font-size:16px}
+
+    .footer{padding:22px 0;color:#aaa;font-size:13px}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Plumber",
+    "name":"Rapid Response Leak & Drain Plumbers LTD",
+    "telephone":"+447366283220",
+    "email":"rapidresponseltd@mail.com",
+    "openingHours":"Mo-Su 00:00-23:59",
+    "url":"https://rapidresponse-source.github.io"
+  }
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container topbar">
+      <div class="brand">
+        <!-- LOGO FIXED HERE -->
+        <img class="logo" src="logo.PNG" alt="Rapid Response logo" />
+        <div>
+          <div class="brandName">Rapid Response</div>
+          <div class="brandSub">Leak & Drain Plumbers LTD</div>
+        </div>
+      </div>
+
+      <a class="btn primary" href="tel:+447366283220">📞 Call 07366 283220</a>
+    </div>
+  </header>
+
+  <main class="hero container">
+    <h1>24/7 Emergency Plumbers</h1>
+    <p class="lead">
+      Leaks, burst pipes, blocked drains & toilets.  
+      Fast response • Day or night • Local & reliable.
+    </p>
+
+    <a class="btn primary" href="tel:+447366283220">Call Now</a>
+  </main>
+
+  <footer class="footer container">
+    © <span id="year"></span> Rapid Response Leak & Drain Plumbers LTD
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
